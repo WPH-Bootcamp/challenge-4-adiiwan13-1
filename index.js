@@ -179,6 +179,22 @@ function main() {
       default:
         hasil = null; // Pengaman jika ada kondisi tak terduga
     }
+
+    // Memanggil fungsi untuk menganalisis hasil perhitungan
+    analisisHasil(hasil);
+
+    // MEKANISME EXIT
+    console.log('\n-------------------------------------------------');
+    let konfirmasi = prompt('Apakah Anda ingin menghitung lagi? (yes/no): ');
+
+    // Mengubah input menjadi lowercase agar handle 'No', 'NO', 'nO'
+    if (konfirmasi.toLowerCase() === 'no') {
+      console.log(
+        '\nTerima kasih telah menggunakan aplikasi ini. Sampai jumpa! 👋'
+      );
+      break; // Menghentikan perulangan while(true) dan keluar dari program
+    }
+    console.log('--------------------------------------\n');
   }
 }
 
