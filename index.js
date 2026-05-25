@@ -187,8 +187,11 @@ function main() {
     console.log('\n-------------------------------------------------');
     let konfirmasi = prompt('Apakah Anda ingin menghitung lagi? (yes/no): ');
 
-    // Mengubah input menjadi lowercase agar handle 'No', 'NO', 'nO'
-    if (konfirmasi.toLowerCase() === 'no') {
+    // Mengubah input menjadi lowercase agar handle 'No', 'NO', 'nO', 'n'
+    if (
+      konfirmasi.trim().toLowerCase() === 'no' ||
+      konfirmasi.trim().toLowerCase() === 'n'
+    ) {
       console.log(
         '\nTerima kasih telah menggunakan aplikasi ini. Sampai jumpa! 👋'
       );
